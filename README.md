@@ -39,3 +39,6 @@ Next steps (pick one)
 3. Keep as a lightweight utility
 
 If you want any of the next steps, tell me which and whether you'd like PHP-only or a framework (Slim/Laravel) scaffold.
+
+Dark mode
+- `index.php` now includes a top-right dark mode toggle. The toggle persists the user's choice to localStorage and respects the system `prefers-color-scheme` when no saved preference exists.

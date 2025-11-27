@@ -110,17 +110,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Domain lookup (SiteGround-friendly)</title>
-  <style>
-	body{font-family:system-ui,Segoe UI,Arial;color:#222;padding:28px}
+	<style>
+		:root{
+			--bg:#ffffff;
+			--text:#222222;
+			--muted:#666666;
+			--panel:#fafafa;
+			--accent:#0b5fff;
+			--border:#ddd
+		}
+		.dark{
+			--bg:#0b0f13;
+			--text:#e6eef6;
+			--muted:#a7b3c3;
+			--panel:#0f1720;
+			--accent:#6ea8ff;
+			--border:#23313b;
+		}
+
+		body{font-family:system-ui,Segoe UI,Arial;color:var(--text);background:var(--bg);padding:28px}
 	form{max-width:720px;margin-bottom:18px}
 	input[type=text]{width:60%;padding:8px;font-size:16px}
 	input[type=submit]{padding:8px 12px;font-size:16px}
-	pre{background:#111;color:#eee;padding:12px;border-radius:6px;overflow:auto}
-	.note{color:#555;margin-top:12px;font-size:14px}
+	pre{background:rgba(0,0,0,0.8);color:#eee;padding:12px;border-radius:6px;overflow:auto}
+	.note{color:var(--muted);margin-top:12px;font-size:14px}
+	a.button{background:var(--accent);color:white;padding:8px 10px;border-radius:5px;text-decoration:none}
   </style>
 </head>
 <body>
-  <h1>Quick domain lookup</h1>
+	<div style="max-width:1100px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px">
+		<h1 style="margin:0">Quick domain lookup</h1>
+		<!-- Dark mode toggle -->
+		<div style="display:flex;align-items:center;gap:8px;font-size:14px">
+			<label for="darkToggle" style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--muted)">
+				<input id="darkToggle" type="checkbox" style="width:28px;height:18px;vertical-align:middle" />
+				<span id="darkToggleLabel">Dark mode</span>
+			</label>
+		</div>
+	</div>
 	<p class="note">This helper performs a basic DNS + WHOIS lookup. For full registrar integration (including registration through SiteGround) use their official API and credentials.</p>
 
 	<div style="display:flex;gap:18px;align-items:flex-start;max-width:1100px">
@@ -233,6 +260,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	?>
 
 </body>
+<script>
+// Dark mode toggle + persist
+(function(){
+	try {
+		const el = document.getElementById('darkToggle');
+		const docEl = document.documentElement;
+		if (!el) return;
+		const stored = localStorage.getItem('darkmode');
+		const prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const useDark = stored === null ? prefers : (stored === '1');
+		if (useDark) docEl.classList.add('dark');
+		el.checked = useDark;
+		el.addEventListener('change', function(e){
+			const on = !!e.target.checked;
+			if (on) docEl.classList.add('dark'); else docEl.classList.remove('dark');
+			try{ localStorage.setItem('darkmode', on ? '1' : '0'); }catch(e){}
+		}, {passive:true});
+	} catch(e) { console.warn('dark toggle failed', e); }
+})();
+</script>
 <footer style="padding:20px 28px;color:#666;font-size:13px;max-width:1100px;margin-top:46px">
 	<!-- Google Analytics placeholder: replace with your GA/gtag code -->
 	<!-- Example: <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
