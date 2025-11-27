@@ -48,3 +48,6 @@ Styles
 
 Branding / logo
 - A simple SVG placeholder logo has been added at `assets/logo.svg` and is shown in the top-left of the header. Replace this with your own logo (SVG/PNG) or point the <img> to a hosted asset.
+
+Library
+- Domain helper functions were moved into a simple library at `src/DomainLookup.php`. Use that file when you need the WHOIS/DNS helpers in other scripts — it includes both a `DomainLookup` class and procedural wrappers (`whois_query`, `is_domain_available`, etc.) for backwards compatibility.
