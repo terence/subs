@@ -90,6 +90,17 @@ function is_domain_available(string $domain): array {
 	return $result;
 }
 
+$noCacheHeaders = [
+	'Cache-Control: no-store, no-cache, must-revalidate, max-age=0',
+	'Pragma: no-cache',
+	'Expires: Mon, 26 Jul 1997 05:00:00 GMT',
+	'Surrogate-Control: no-store',
+];
+// Send no-cache headers early (safe here because no output has been sent yet)
+foreach ($noCacheHeaders as $h) {
+	@header($h);
+}
+
 // Simple form handler
 $error = null;
 $out = null;
