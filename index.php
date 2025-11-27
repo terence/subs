@@ -120,37 +120,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
   <title>Domain lookup (SiteGround-friendly)</title>
-	<style>
-		:root{
-			--bg:#ffffff;
-			--text:#222222;
-			--muted:#666666;
-			--panel:#fafafa;
-			--accent:#0b5fff;
-			--border:#ddd
-		}
-		.dark{
-			--bg:#0b0f13;
-			--text:#e6eef6;
-			--muted:#a7b3c3;
-			--panel:#0f1720;
-			--accent:#6ea8ff;
-			--border:#23313b;
-		}
-
-		body{font-family:system-ui,Segoe UI,Arial;color:var(--text);background:var(--bg);padding:28px}
-	form{max-width:720px;margin-bottom:18px}
-	input[type=text]{width:60%;padding:8px;font-size:16px}
-	input[type=submit]{padding:8px 12px;font-size:16px}
-	pre{background:rgba(0,0,0,0.8);color:#eee;padding:12px;border-radius:6px;overflow:auto}
-	.note{color:var(--muted);margin-top:12px;font-size:14px}
-	a.button{background:var(--accent);color:white;padding:8px 10px;border-radius:5px;text-decoration:none}
-  </style>
+	<link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-	<div style="max-width:1100px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px">
-		<h1 style="margin:0">Quick domain lookup</h1>
+	<div class="header-row">
+		<div class="brand">
+			<a href="/" title="Site logo" style="display:inline-block;text-decoration:none;color:inherit">
+				<span class="logo"><img src="assets/logo.svg" alt="logo" /></span>
+			</a>
+			<h1>Quick domain lookup</h1>
+		</div>
 		<!-- Dark mode toggle -->
 		<div style="display:flex;align-items:center;gap:8px;font-size:14px">
 			<label for="darkToggle" style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--muted)">
@@ -161,8 +144,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	</div>
 	<p class="note">This helper performs a basic DNS + WHOIS lookup. For full registrar integration (including registration through SiteGround) use their official API and credentials.</p>
 
-	<div style="display:flex;gap:18px;align-items:flex-start;max-width:1100px">
-		<div style="flex:1">
+	<div class="row">
+		<div class="col-main">
 			<form method="post">
 	<label for="domain">Domain</label>
 	<input id="domain" name="domain" autofocus placeholder="example.com" type="text" value="<?php echo isset($domain) ? htmlspecialchars($domain) : ''; ?>" />
@@ -181,9 +164,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		</div>
 
 		<!-- Right column: AdSense / sidebar placeholder -->
-		<aside style="width:300px;flex-shrink:0;border:1px dashed #ddd;padding:16px;background:#fafafa;border-radius:6px">
+		<aside class="aside">
 			<div style="font-weight:600;margin-bottom:8px">Ad placeholder</div>
-			<div style="background:#eee;height:250px;display:flex;align-items:center;justify-content:center;color:#666;border-radius:4px">Google AdSense / Promo (300×250)</div>
+			<div class="ad-box">Google AdSense / Promo (300×250)</div>
 			<p style="font-size:12px;color:#666;margin-top:10px">Replace this block with your AdSense code when you're ready: &lt;script&gt;...Adsense code...&lt;/script&gt;</p>
 		</aside>
 	</div>
@@ -291,7 +274,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	} catch(e) { console.warn('dark toggle failed', e); }
 })();
 </script>
-<footer style="padding:20px 28px;color:#666;font-size:13px;max-width:1100px;margin-top:46px">
+<footer>
 	<!-- Google Analytics placeholder: replace with your GA/gtag code -->
 	<!-- Example: <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 			 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>

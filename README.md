@@ -42,3 +42,9 @@ If you want any of the next steps, tell me which and whether you'd like PHP-only
 
 Dark mode
 - `index.php` now includes a top-right dark mode toggle. The toggle persists the user's choice to localStorage and respects the system `prefers-color-scheme` when no saved preference exists.
+
+Styles
+- Page styles have been moved into `assets/style.css`. Update that file to change layout or color variables (the stylesheet contains CSS variables and a `.dark` mode configuration).
+
+Branding / logo
+- A simple SVG placeholder logo has been added at `assets/logo.svg` and is shown in the top-left of the header. Replace this with your own logo (SVG/PNG) or point the <img> to a hosted asset.
