@@ -87,6 +87,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			<div class="ad-box">
 				<div class="ad-placeholder">
 					<div style="font-size:18px">300 × 600</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8376419508952050"
+     crossorigin="anonymous"></script>
+<!-- Skyscraper 300x600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-8376419508952050"
+     data-ad-slot="1820822477"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 					<small>AdSense / Promo placeholder</small>
 				</div>
 			</div>
