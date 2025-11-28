@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      crossorigin="anonymous"></script>
 <!-- Skyscraper 300x600 -->
 <ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:600px"
+     style="display:inline-block;width:300px;height:300px"
      data-ad-client="ca-pub-8376419508952050"
      data-ad-slot="1820822477"></ins>
 <script>
