@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="Expires" content="0" />
-  <title>Domain lookup (SiteGround-friendly)</title>
+  <title>WHOIS Domain Lookup</title>
 	<link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			<a href="/" title="Site logo" style="display:inline-block;text-decoration:none;color:inherit">
 				<span class="logo"><img src="assets/glitchdata_logo1.png" alt="glitchdata logo" /></span>
 			</a>
-			<h1>Quick domain lookup</h1>
+			<h1>WHOIS Domain Lookup</h1>
 		</div>
 		<!-- Dark mode toggle -->
 		<div style="display:flex;align-items:center;gap:8px;font-size:14px">
