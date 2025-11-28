@@ -34,7 +34,7 @@ a.button{background:var(--accent);color:white;padding:8px 10px;border-radius:5px
 
 /* Make ad a bit smaller on narrow screens so layout isn't broken */
 @media (max-width:600px){
-  .ad-box{height:250px;max-width:100%}
+  .ad-box{height:700px;max-width:100%}
   .aside{width:100%}
   .row{flex-direction:column}
 }
