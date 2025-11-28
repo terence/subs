@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<div class="header-row">
 		<div class="brand">
 			<a href="/" title="Site logo" style="display:inline-block;text-decoration:none;color:inherit">
-				<span class="logo"><img src="assets/logo.svg" alt="logo" /></span>
+				<span class="logo"><img src="assets/glitchdata_logo1.png" alt="glitchdata logo" /></span>
 			</a>
 			<h1>Quick domain lookup</h1>
 		</div>
