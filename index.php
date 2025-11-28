@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <title>WHOIS Domain Lookup</title>
 	<link rel="stylesheet" href="assets/style.css" />
 	<!-- favicons (SVG + PNG fallbacks) -->
-	<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="assets/favicon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 	<link rel="icon" href="assets/favicon.ico" sizes="32x32 16x16" />
