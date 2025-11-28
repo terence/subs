@@ -6,7 +6,7 @@ What was added
 - `index.php` — a small web UI + form that checks DNS (A/NS) and performs a WHOIS lookup to infer domain availability.
 
 AdSense and Google Analytics placeholders
-- The UI includes a right-column Ad placeholder (300x250) in `index.php` (within the <aside> block) — replace this block with your AdSense script when you're ready.
+ - The UI includes a right-column Ad placeholder (300x600) in `index.php` (within the <aside> block) — replace this block with your AdSense script when you're ready.
 - There is also a Google Analytics / gtag placeholder in the footer (commented example) which you can replace with your GA measurement ID.
 
 New features
