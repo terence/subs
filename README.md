@@ -50,5 +50,25 @@ Branding / logo
 - A simple SVG placeholder logo has been added at `assets/logo.svg` and is shown in the top-left of the header. Replace this with your own logo (SVG/PNG) or point the <img> to a hosted asset.
 - The repository includes `assets/glitchdata_logo1.png` (the current header logo) and a starter `assets/logo.svg`. Replace either file with your preferred logo (SVG/PNG) or point the <img> to a hosted asset.
 
+Favicon
+- `assets/glitchdata_logo1.png` is used as the site's favicon (`<link rel="icon">`) and as the `apple-touch-icon`. Replace the PNG or add other sizes if you prefer a dedicated favicon file (ICO or separate PNG sizes for best cross-device support).
+
+Favicons
+- Added an SVG favicon at `assets/favicon.svg` (a small 'SG' badge) and kept `assets/glitchdata_logo1.png` as a PNG fallback and apple-touch-icon.
+- You can pre-generate PNG and ICO favicons from the logo using the included script:
+
+```bash
+php scripts/generate_favicons.php
+```
+
+This will generate:
+- `assets/favicon-16x16.png`
+- `assets/favicon-32x32.png`
+- `assets/favicon-48x48.png`
+- `assets/favicon-180x180.png` (apple touch)
+- `assets/favicon.ico` (simple ICO containing the 32x32 PNG)
+
+If you prefer, I can pre-generate all files and commit them for you instead of including a generator script.
+
 Library
 - Domain helper functions were moved into a simple library at `src/DomainLookup.php`. Use that file when you need the WHOIS/DNS helpers in other scripts — it includes both a `DomainLookup` class and procedural wrappers (`whois_query`, `is_domain_available`, etc.) for backwards compatibility.

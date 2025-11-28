@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  favicon.svg (wrapper) — displays the PNG logo so the browser sees the exact
+  PNG artwork as an SVG-based favicon without embedding a large base64 blob.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <image href="glitchdata_logo1.png" x="0" y="0" width="128" height="128" preserveAspectRatio="xMidYMid slice" />
+</svg>
