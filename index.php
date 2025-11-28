@@ -85,18 +85,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		<aside class="aside">
 			<div style="font-weight:600;margin-bottom:8px">Ad placeholder</div>
 			<div class="ad-box">
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8376419508952050"
-     crossorigin="anonymous"></script>
-<!-- Skyscraper 300x600 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:600px"
-     data-ad-client="ca-pub-8376419508952050"
-     data-ad-slot="1820822477"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+				<div class="ad-placeholder">
+					<div style="font-size:18px">300 × 600</div>
+					<small>AdSense / Promo placeholder</small>
+				</div>
 			</div>
-			<p style="font-size:12px;color:#666;margin-top:10px">Replace this block with your AdSense code when you're ready: &lt;script&gt;...Adsense code...&lt;/script&gt;</p>
+			<p style="font-size:12px;color:#666;margin-top:10px">To enable a real AdSense widget replace the placeholder with your publisher snippet (example commented below).</p>
+			<!-- Example AdSense snippet (leave commented until you enable ads)
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8376419508952050" crossorigin="anonymous"></script>
+			<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-8376419508952050" data-ad-slot="1820822477"></ins>
+			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+			-->
 		</aside>
 	</div>
   </form>

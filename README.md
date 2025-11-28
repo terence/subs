@@ -7,6 +7,7 @@ What was added
 
 AdSense and Google Analytics placeholders
  - The UI includes a right-column Ad placeholder (300x600) in `index.php` (within the <aside> block) — replace this block with your AdSense script when you're ready.
+ - The UI includes a right-column Ad placeholder (300x600) in `index.php` (within the <aside> block). The placeholder is non-executing — a sample AdSense snippet is commented out locally inside `index.php`. Replace that placeholder with your own publisher snippet when you are ready to enable ads.
 - There is also a Google Analytics / gtag placeholder in the footer (commented example) which you can replace with your GA measurement ID.
 
 New features
